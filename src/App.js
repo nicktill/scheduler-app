@@ -1,6 +1,8 @@
 import './App.css';
-import Form from './components/form';
+import Form from './components/Form';
 import TodoList from './components/TodoList';
+import { useState } from "react";
+
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -9,7 +11,7 @@ function App() {
       <header>
         <h1>Scheduler App</h1>
       </header>
-      <Form />
+      <Form setInputText={setInputText} />
       <TodoList />
 
     </div>
