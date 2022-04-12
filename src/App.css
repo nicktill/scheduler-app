@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background-image: linear-gradient(120deg, #edacff 0%, #777fee 100%);
   color: white;
   min-height: 100vh;
 }
@@ -31,14 +31,14 @@ form button {
 }
 
 form button {
-  color: #ff6f47;
+  color: #9c66ff;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #ff6f47;
+  background: #9c66ff;
   color: white;
 }
 
@@ -74,7 +74,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #9c66ff;
   color: white;
   border: none;
   padding: 1rem;
@@ -125,7 +125,7 @@ select {
 }
 
 select {
-  color: #ff6f47;
+  color: #9466ff;
   cursor: pointer;
   width: 12rem;
 }
@@ -137,7 +137,7 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #9c66ff;
   cursor: pointer;
   pointer-events: none;
 }
