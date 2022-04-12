@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/form';
 
 function App() {
   return (
     <div className="App">
-      <h1>/nicktill</h1>
+      <header>
+        <h1>Scheduler App</h1>
+      </header>
+      <Form />
+
     </div>
   );
 }
