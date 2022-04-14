@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>/tillys schedule </h1>
+        <h1>/scheduler </h1>
       </header>
       <Form
         inputText={inputText}
@@ -19,6 +19,7 @@ function App() {
         setInputText={setInputText}
       />
       <TodoList todos={todos} setTodos={setTodos} />
+      <p class="alginTopLeft"><a href="https://nicktill.github.io"> Created by NickTill </a> </p>
 
     </div>
   );

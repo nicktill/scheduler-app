@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 body {
   background-image: linear-gradient(120deg, #edacff 0%, #777fee 100%);
   color: white;
@@ -143,6 +154,15 @@ select {
   background: #9c66ff;
   cursor: pointer;
   pointer-events: none;
+}
+
+.alginTopLeft {
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-underline-offset: 1000000px;
 }
 
 /* Transition */
