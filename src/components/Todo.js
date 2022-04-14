@@ -6,9 +6,18 @@ const Todo = ({ text, todo, todos, setTodos }) => {
         setTodos(todos.filter(el => el.id !== todo.id));
 
     }
-    const completeHandler = () => {
-        setTodos(todos.filter(el => el.id !== todo.id));
+    const completeHandler = (item) => {
+        setTodos(todos.map(item => {
+            if (item.id === todo.id) {
+                return {
+                    ...item,
+                    completed: !item.completed,
+                };
 
+            }
+            // otherwise simply return the items
+            return item
+        }))
     }
     return (
         <div className="todo">
