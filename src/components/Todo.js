@@ -12,6 +12,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
                 return {
                     ...item,
                     completed: !item.completed,
+
                 };
 
             }
@@ -21,7 +22,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     }
     return (
         <div className="todo">
-            <ul className="todo-item">{text}</ul>
+            <ul className={`todo-item ${todo.completed ? "completed" : ""} `}>{text}</ul>
             <button onClick={completeHandler} className="complete-btn">
                 <i className="fas fa-check"> </i>
             </button>
