@@ -2,6 +2,7 @@ import React from "react";
 
 const Todo = ({ text, todo, todos, setTodos }) => {
     const deleteHandler = () => {
+        // filtering state our and trying to match the activity we clicked on
         setTodos(todos.filter(el => el.id !== todo.id));
 
     }
@@ -20,10 +21,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             </button>
         </div >
     )
-}
-
-const removeItem = ({ id }) => {
-
 }
 
 export default Todo

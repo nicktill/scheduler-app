@@ -6,6 +6,7 @@ const Form = ({ setInputText, inputText, setTodos, todos }) => {
     }
     const submitTodoHandler = (e) => {
         e.preventDefault();
+        // creating object representation of todos to save to our state
         setTodos([
             ...todos, { text: inputText, completed: false, id: Math.random() * 3 }
         ])
