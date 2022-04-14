@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [completed, setCompleted] = useState([]);
   return (
     <div className="App">
       <header>
