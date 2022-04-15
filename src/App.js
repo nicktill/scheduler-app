@@ -1,15 +1,21 @@
 import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function App() {
+
   // state stuff
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
+
+  //use effect
+  useEffect(() => {
+    filterHandler()
+  }, [todos])
 
   // Functions
   const filterHandler = () => {
@@ -35,6 +41,7 @@ function App() {
         todos={todos}
         setTodos={setTodos}
         setInputText={setInputText}
+        filterHandler={filterHandler}
       />
       <TodoList todos={todos} setTodos={setTodos} />
       <p class="alginTopLeft"><a href="https://nicktill.github.io"> Created by NickTill </a> </p>
