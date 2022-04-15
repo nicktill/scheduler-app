@@ -15,20 +15,20 @@ function App() {
   //use effect
   useEffect(() => {
     filterHandler()
-  }, [todos])
+  }, [todos, status])
 
   // Functions
   const filterHandler = () => {
     switch (status) {
       case 'completed':
-        setFilteredTodos(todos.filter(todo => todo.completed === true))
-        break
+        setFilteredTodos(todos.filter(todo => todo.completed === true));
+        break;
       case 'uncompleted':
-        setFilteredTodos(todos.filter(todo => todo.completed === false))
-        break
+        setFilteredTodos(todos.filter(todo => todo.completed === false));
+        break;
       case 'all':
-        setFilteredTodos(todos.filter(todos))
-        break
+        setFilteredTodos(todos.filter(todos));
+        break;
     }
   }
   return (
@@ -41,9 +41,12 @@ function App() {
         todos={todos}
         setTodos={setTodos}
         setInputText={setInputText}
-        filterHandler={filterHandler}
       />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <TodoList
+        todos={todos}
+        setTodos={setTodos}
+        filteredTodos={filteredTodos}
+      />
       <p class="alginTopLeft"><a href="https://nicktill.github.io"> Created by NickTill </a> </p>
 
     </div>
