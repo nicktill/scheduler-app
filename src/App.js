@@ -12,7 +12,7 @@ function App() {
   const [status, setStatus] = useState(['all']);
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-  //run once when app starts to get info
+  // run once when app starts to get info
   useEffect(() => {
     getLocalTodos()
   }, [])  // empty array since only runs once
@@ -39,22 +39,17 @@ function App() {
   }
   // save to storage saving
   const saveLocalTodos = () => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]))
-    }
-    else {
-      localStorage.setItem('todos', JSON.stringify([todos]));
-    }
-  }
+    localStorage.setItem("todos", JSON.stringify(todos));
+  };
 
   const getLocalTodos = () => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]))
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]))
     }
     else {
-      localStorage.getItem('todos', JSON.stringify([todos]));
+      let todosFromLocal = JSON.parse(localStorage.getItem("todos"))
+      setTodos(todosFromLocal);
     }
-
   }
   return (
     <div className="App">
