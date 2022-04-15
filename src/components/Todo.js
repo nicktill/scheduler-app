@@ -20,17 +20,6 @@ const Todo = ({ text, todo, todos, setTodos }) => {
             return item
         }))
     }
-
-    // const completeItems = (item) => {
-    //     completedArray = []
-    //     nonCompletedArray = []
-    //     setTodos(todos.map(item => {
-    //         // if user selects completed
-    //         if (item.completed === true)
-    //             console.log(item);
-    //         // if user selects non completeed
-    //     }))
-    // }
     return (
         <div className="todo">
             <ul className={`todo-item ${todo.completed ? "completed" : ""} `}>{text}</ul>

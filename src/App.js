@@ -9,7 +9,7 @@ function App() {
   // state stuff
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState([]);
+  const [status, setStatus] = useState(['all']);
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   //use effect
@@ -26,8 +26,8 @@ function App() {
       case 'uncompleted':
         setFilteredTodos(todos.filter(todo => todo.completed === false));
         break;
-      case 'all':
-        setFilteredTodos(todos.filter(todos));
+      default:
+        setFilteredTodos(todos);
         break;
     }
   }
@@ -41,6 +41,7 @@ function App() {
         todos={todos}
         setTodos={setTodos}
         setInputText={setInputText}
+        setStatus={setStatus}
       />
       <TodoList
         todos={todos}
