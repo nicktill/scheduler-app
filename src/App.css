@@ -16,10 +16,27 @@ a {
 }
 
 body {
-  background-image: linear-gradient(120deg, #edacff 0%, #777fee 100%);
+  background-image: linear-gradient(-62deg, #edacff, #777fee, #eeb5fd, #99aafc, rgb(242, 129, 129));
   color: white;
-  min-height: 100vh;
+  background-size: 350% 350%;
+  animation: gradient 14s ease infinite;
+
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 header {
   font-size: 1.5rem;
